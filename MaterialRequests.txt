@@ -1,2 +1,1 @@
-Company A,1,1Company B,2,
-5Company C,3,8Company D,4,9Company E,5,10Company F,6,17Company G,7,17Company H,8,20Company I,9,24Company J,10,30
+Company A,1,1Company B,2,5Company C,3,8Company D,4,9Company E,5,10Company F,6,17Company G,7,17Company H,8,20Company I,9,24Company J,10,30
