@@ -1,6 +1,9 @@
 #Author: Jacob Peel
 #Program Description: Material purchase recommendations for greatest revenue.
 
+#Import company class
+import company
+
 #Declare constants
 MATERIALS_REQUESTS_DATA = "MaterialRequests.txt"
 
@@ -33,15 +36,22 @@ def main():
         quantity = element[2]
         price = element[3]
 
-        company_dict[id] = name
+        my_company = company.Company(id, name, quantity, price)
+        company_dict[id] = my_company
         quantity_dict[id] = quantity
         price_dict[id] = price
 
     materials_file.close()
 
-    print(company_dict)
-    print(quantity_dict)
-    print(price_dict)
+    print_menu(company_dict)
+
+def print_menu(company_dict):
+
+    #Print menu
+    menu_heading = "{:<18}{:<8}{:<3}".format("Name", "Qty", "Price")
+    print(menu_heading)
+    for x in company_dict:
+        print(company_dict[x])
 
 #Call main
 main()
