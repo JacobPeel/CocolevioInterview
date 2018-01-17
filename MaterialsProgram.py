@@ -22,6 +22,9 @@ def main():
     #Create price dictionary
     price_dict = {}
 
+    #Create unit price dictionary
+    unit_price_dict = {}
+
     #Create purchasers list
     purchasers_list = []
 
@@ -36,14 +39,18 @@ def main():
         quantity = element[2]
         price = element[3]
 
-        my_company = company.Company(id, name, quantity, price)
+        unit_price = float((float(price))/(int(quantity)))
+
+        my_company = company.Company(id, name, quantity, price, unit_price)
         company_dict[id] = my_company
         quantity_dict[id] = quantity
         price_dict[id] = price
+        unit_price_dict[id] = unit_price
 
     materials_file.close()
 
     print_menu(company_dict)
+    print(unit_price_dict)
 
 def print_menu(company_dict):
 
