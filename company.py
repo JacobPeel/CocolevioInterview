@@ -1,6 +1,8 @@
 #Author: Jacob Peel
 #Program Description: Company Class
 
+from operator import itemgetter, attrgetter
+
 #Create Company class
 class Company:
 
@@ -35,6 +37,8 @@ class Company:
 
     #Define __str__ method
     def __str__(self):
-        string = "{:<18}{:<8}{:<3}".format(self.__name, str(self.__quantity), "$" + str("{0:.2f}".format(self.__price)))
+        string = "{:<18}{:<8}{:<10}{:<10}".format(self.__name, str(self.__quantity), "$" + str("{0:.2f}".format(self.__price)), "$" + str("{0:.2f}".format(self.__unit_price)))
         return string
+
+    
         
